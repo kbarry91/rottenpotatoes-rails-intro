@@ -14,7 +14,7 @@ class MoviesController < ApplicationController
     # Using ssssion[] hash for remembering
     @all_ratings = Movie.ratings # Assign Movie.ratings to all ratings
     @sort = params[:sort] || session[:sort] # assign sorted values to sort
-    session[:ratings] = session[:ratings] || {'G'=>'','PG'=>'','PG-13'=>'','R'=>''}
+    session[:ratings] = session[:ratings] || {'G'=>'','PG'=>'','PG-13'=>'','R'=>''} # set ratings to nill
     @t_param = params[:ratings] || session[:ratings]
     session[:sort] = @sort
     session[:ratings] = @t_param 
