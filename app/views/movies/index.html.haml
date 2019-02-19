@@ -6,7 +6,8 @@
     = rating
     -# set tag for check box
     = check_box_tag "ratings[#{rating}]",'',('checked' if @t_param.include? rating)
-    = submit_tag 'Refresh'
+    -# submit ratings
+    = submit_tag 'Refresh', :id => 'ratings_submit' 
 %table#movies
   %thead
     %tr
